@@ -7,15 +7,19 @@
 </head>
 </head>
 <body>
+<header role="banner">
  <h1>网站一级标题</h1>
- <div>
+ <nav role="navigation">
    <ul>
    <li><a href="#">导航链接一</a></li>
    <li><a href="#">导航链接二</a></li>
    <li><a href="#">导航链接三</a></li>
    <li><a href="#">导航链接四</a></li>
    </ul>
- </div>
+ </nav>
+</header>
+ 
+ <main role="main">
  <article>
    <h2>文章一级标题</h2>
    <h3>文章二级标题</h3>
@@ -32,7 +36,7 @@
    <h2>文章一级标题</h2>
    <h3>文章二级标题</h3>
     
-        <p>卡夫卡  《室内滂沱》</p>
+        <p><span class="auther">卡夫卡  《室内滂沱》</span></p>
         <p>
             他用上牙紧紧地咬住下唇，目注前方，一动不动。<br/>
             “你这样是毫无意义的。到底出了什么事？你的生意不算太好，可也并不槽糕；再说，即使破了产——这仍然是无稽之谈——你也很容易找到新的出路，你又年轻又健康，学过经济学，人很能干，需要你操心的只有你自己和你的母亲。所以我要求你振作起来，告诉我，你为什么大白天把我叫来，又为什么这个样子坐着？” <br/>
@@ -74,9 +78,9 @@
      <p>下面是一个表格，给表格加一个border="1"好让你看出是一个表格</p>
      <table border="1">
        <tr>
-         <td>表头</td>
-         <td>表头</td>
-         <td>表头</td>
+         <th>表头</th>
+         <th>表头</th>
+         <th>表头</th>
        </tr>
        <tr>
          <td>表内容单元格</td>
@@ -98,42 +102,84 @@
          <td>表内容单元格</td>
          <td><a href="">操作</a>></td>
        </tr>
-       <tr>
+       <tr class="buttomTable">
          <td>总计</td>
-         <td>1000</td>
+         <td colspan="2">1000</td>
        </tr>
      </table>
+ </article>
+ </main>
+ <aside>
+        <h4>这里是一个侧栏，这是侧栏的标题</h4>
+        <!--<h3>侧栏注册窗口标题</h3>-->
+        
+        <form  method="post">
+            <div>
+                <label class="tips">请输入邮箱地址</label>
 
-       <aside>
-            <h2>这里以后是一个侧栏,这是侧栏的标题</h2>
-            <h2>侧栏注册窗口标题</h2>
-            <form>
-                <p>请输入邮箱地址: <input type="email" placeholder="这是一个文本输入框"></p>
+                <input type="text" placeholder="邮箱" />
                 <p>邮箱地址请按要求格式输入</p>
-                <p>请输入密码: <input type="password" placeholder="这是一个文本输入框" pattern="[A-Za-z]{6,16}">请重复输入密码: <input type="password" placeholder="这是一个文本输入框" pattern="[A-Za-z]{6,16}"></p>
+            </div>
+            
+            <div>
+                <label class="tips">请输入密码</label>
+                <input type="password" placeholder="密码" />
+            </div>
+            
+            <div>
+                <label class="tips">请重复输入密码</label>
+                <input type="password" placeholder="请重复输入密码" />
                 <p>密码请为6-16位英文数字</p>
+            </div>
+        </form>
+        
 
+            <form  method="post">
+                <!--同一组的单选按钮，name 取值一定要一致，这样同一组的单选按钮才可以起到单选的作用。-->
                 <div>
-                    性别:&nbsp;
-                    <input type="radio" checked="checked" name="sex" value="male" id="male"><label for="male">男</label>
-                    <input type="radio" name="sex" value="female" id="female"><label for="female">女</label>
-                    城市:&nbsp;
-                    <select name="cities">
-                        <option value="beijing" selected="selected">北京</option>
-                        <option value="shanghai">厦门</option>
-                        <option value="shenzhen">杭州</option>
-                        <option value="guangzhou">深圳</option>
+                    <label class="tips">性别</label>
+                    <!--value提交数据到服务器的值；checked默认被选中-->
+
+                    <input type="radio" value="male" name="sex" checked="checked" />
+                    <label>男</label>
+                    <input type="radio" value="female" name="sex" />
+                    <label>女</label>
+                </div>
+                
+            </form>
+            <form  method="post">
+                <div>
+                    <label class="tips">城市</label>
+                    <select>
+                        <option value="厦门">厦门</option>
+                        <option value="福州" selected="selected">福州</option>
+                        <option value="深圳">深圳</option>
                     </select>
-                    爱好:&nbsp;
-                    <input type="checkbox" name="habit" id="sport"><label for="sport">&nbsp;运动</label>
-                    <input type="checkbox" name="habit" id="art"><label for="art">&nbsp;艺术</label>
-                    <input type="checkbox" name="habit" id="science"><label for="science">&nbsp;科学</label>
-                    个人描述:&nbsp;
-                    <textarea>这是一个多行输入框, 输入您的个人描述</textarea>
-                    <input type="submit" value="确认提交">
                 </div>
             </form>
-        </aside>
- </article>
+            <form  method="post">
+                <div>
+                    <label class="tips">爱好</label>
+                    <input type="checkbox" value="sport" name="hobby" />
+                    <label>运动</label>
+                    <input type="checkbox" value="art" name="hobby" />
+                    <label>艺术</label>
+                    <input type="checkbox" value="science" name="hobby" />
+                    <label>科学</label>
+                </div>
+            </form>
+            <form action="save.php" method="post">
+                <div>
+                    <label class="tips">个人描述</label>
+
+                    <textarea rows="2" cols="20" >这是一个多行输入框( •̀ .̫ •́ )✧</textarea>
+                </div>
+            </form>
+        <input type="button" class="submitButton" value="确认提交" />
+</aside>
+
+    <footer>
+        <p>版权所有ZZITE</p>
+    </footer>
 </body>
 </html>
