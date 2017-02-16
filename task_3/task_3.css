@@ -1,0 +1,66 @@
+* {
+	box-sizing: border-box;
+}
+
+a:link {color:#826858;text-decoration:none;}    /* 未被访问的链接 */
+a:visited {color:#007d65;} /* 已被访问的链接 */
+a:hover {color:#6f60aa;text-decoration:underline;}   /* 鼠标指针移动到链接上 */
+a:active {color:#0000FF;}  /* 正在被点击的链接 */
+
+h1{
+	font-size: 14px;
+	margin: 0;
+}
+
+.wrap{
+	margin:  20px;
+	padding: 20px;
+	background: #abc88b;
+	border: 1px solid #ccc;
+	overflow: auto;
+}
+.team{
+  position: relative;
+	float: left;
+	padding:20px;
+	width:200px;
+}
+.teamlogo{
+	height:82px;
+	width: 82px;
+}
+.teamlogo img{
+	height:80px;
+	width: 80px;
+}
+.teamname{
+	position: absolute;
+	right: 10px;
+	top: 20px;
+}
+.teamshow {
+	float: right;
+	width: 120px;
+	padding: 0 20px 20px;
+}
+.teamshow img {
+	width: 80px;
+	height: 80px;
+}
+.teamshow ul  {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.teamshow ul li {
+	margin-top: 20px;
+}
+.teamprofile {
+	margin: 0 140px 0 220px;
+	padding: 20px;
+
+}
+.team,.teamshow,.teamprofile{
+	background: #fffffb;
+	border: 1px solid #999d9c;
+}
