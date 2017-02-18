@@ -27,6 +27,59 @@
 			</ul>
 		</nav>
 	</header>
+  <aside>
+    <h3 class="aside">这里以后是一个侧边栏，这历史侧边栏的标题</h3>
+    <form action="" method="post">
+      <div>
+        <div class="input_1">请输入邮箱地址</div>
+        <input class="srk" type="email" placeholder="这是一个文本输入框">
+      </div>
+      <div class="ts">
+        邮箱地址请按要求格式输入
+      </div>
+      <div>
+        <div class="input_1">请输入密码</div>
+        <input class="srk" type="password" minlength="6" maxlength="16" pattern="[A-Za-z0-9\-]*">
+      </div>
+      <div>
+        <div class="input_1">请重复输入密码</div>
+        <input type="password" class="srk" minlength="6"
+        maxlength="16" pattern="[A-Za-z0-9\-]*">
+      </div>
+      <div class="ts">密码为6-16位英文数字</div>
+      <div>
+        <div class="input_2">性别</div>
+        <input type="radio" name="sex" id="man" checked="checked"/>
+        <label for="man">男</label>
+        <input type="radio" name="sex" id="woman"/>
+        <label for="woman">女</label>
+      </div>
+      <div>
+        <div class="input_2">城市</div>
+        <select>
+          <option value="xm">厦门</option>
+          <option value="sz">深圳</option>
+          <option value="sh">上海</option>
+        </select>
+      </div>
+      <div>
+        <div class="input_2">爱好</div>
+        <input type="checkbox" id="sport"/>
+        <label for="sport">运动</label>
+        <input type="checkbox" id="art"/>
+        <label for="sport">艺术</label>
+        <input type="checkbox" id="science"/>
+        <label for="sport">科学</label>
+      </div>
+      <div>
+        <div class="input_1">个人描述</div>
+        <textarea placeholder="这是个多行输入框，输入您的个人描述"></textarea>
+      </div>
+      <div class="submit">
+      <input type="submit" value="确认提交">        
+      </div>
+    </form>
+  </aside>
 	<article>
 		<header>
 			<h2>文章一级标题</h2>
@@ -56,59 +109,6 @@
     	这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落。
   		</p>
 	</article>
-	<aside>
-		<h3 class="aside">这里以后是一个侧边栏，这历史侧边栏的标题</h3>
-		<form action="" method="post">
-			<div>
-				<div class="input_1">请输入邮箱地址</div>
-				<input class="srk" type="email" placeholder="这是一个文本输入框">
-			</div>
-			<div class="ts">
-				邮箱地址请按要求格式输入
-			</div>
-			<div>
-				<div class="input_1">请输入密码</div>
-				<input class="srk" type="password" minlength="6" maxlength="16" pattern="[A-Za-z0-9\-]*">
-			</div>
-			<div>
-				<div class="input_1">请重复输入密码</div>
-				<input type="password" class="srk" minlength="6"
-				maxlength="16" pattern="[A-Za-z0-9\-]*">
-			</div>
-			<div class="ts">密码为6-16位英文数字</div>
-			<div>
-				<div class="input_2">性别</div>
-				<input type="radio" name="sex" id="man" checked="checked"/>
-				<label for="man">男</label>
-				<input type="radio" name="sex" id="woman"/>
-				<label for="woman">女</label>
-			</div>
-			<div>
-				<div class="input_2">城市</div>
-				<select>
-					<option value="xm">厦门</option>
-					<option value="sz">深圳</option>
-					<option value="sh">上海</option>
-				</select>
-			</div>
-			<div>
-				<div class="input_2">爱好</div>
-				<input type="checkbox" id="sport"/>
-				<label for="sport">运动</label>
-				<input type="checkbox" id="art"/>
-				<label for="sport">艺术</label>
-				<input type="checkbox" id="science"/>
-				<label for="sport">科学</label>
-			</div>
-			<div>
-				<div class="input_1">个人描述</div>
-				<textarea placeholder="这是个多行输入框，输入您的个人描述"></textarea>
-			</div>
-			<div class="submit">
-			<input type="submit" value="确认提交">				
-			</div>
-		</form>
-	</aside>
 	<article>
 		<header>
     		<h2>另一篇文章的一级标题</h2>
@@ -243,5 +243,5 @@
   		</div>
 	</article>
 	<footer>
-  	<span>版权所有&copy;ZZITE<a class="name" href="#">@linchengyi</a></span>
+  	<span>版权所有&copy;ZZITE<a class="name" href="#">&nbsp;@linchengyi</a></span>
 	</footer>
