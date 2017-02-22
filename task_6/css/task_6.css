@@ -58,7 +58,7 @@ body
     width: 641px;
     height: 301px;
     float: left;
-    background: url("image/img_1.jpg");
+    background: url("../image/img_1.jpg");
     background-size: 641px 301px;
 }
 
@@ -354,7 +354,7 @@ body
 {
     width: 458px;
     height: 275px;
-    background:url("image/img_2.jpg");
+    background:url("../image/img_2.jpg");
     background-size: cover;
     position: relative;
 }
