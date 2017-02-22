@@ -3,6 +3,6 @@ My projects in Baidu IFE
 
 ***
 
-##任务DEMO
+##所有任务DEMO
 
-[task_6](http://htmlpreview.github.io/?https://github.com/ZZITE/Baidu_IFE/blob/master/task_6/task_6.html) 
+[请移步个人博客查看](https://zzite.github.io/demo/) 
