@@ -1,0 +1,88 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  margin:0;
+}
+.main{
+  width: 300px;
+  margin:20px 20px;
+}
+input{
+  margin:0;
+  display: none;
+}
+/* 伪元素 */
+.radio{
+  display: flex;
+  width: 50px;
+  justify-content: space-between;
+}
+.radio_a+label{
+  width:15px;
+  height: 15px;
+  border:1px solid #d9d6c3;
+  display:flex;
+  border-radius: 50%;
+}
+.radio_a:checked+label{
+   border:1px solid #d2553d;
+   font-weight: 700;
+}
+.radio_a:checked+label::after{
+  margin: auto;
+  width:9px;
+  height:9px;
+  line-height: 9px;
+  font-size: 10px;
+  border-radius: 50%;
+  width:6px;
+  height:6px;
+  content: ' ';
+  background: #d2553d;
+}
+.checkbox{
+  margin-top: 8px;
+  font-weight: 700;
+}
+.checkBox_a+label{
+  width:14px;
+  height:14px;
+  border:1px solid #d9d6c3;
+  display: -webkit-flex;
+  display:flex;
+}
+.checkBox_a:checked+label{
+   border:1px solid #d2553d;
+   font-weight: 700;
+}
+.checkBox_a:checked+label::after{
+  width:9px;
+  height:9px;
+  margin: auto;
+  content: '\2714';
+  color: #d2553d;
+  line-height: 9px;
+  font-size: 10px;
+}
+
+/* 雪碧图 */
+.checkBox_b+label,.radio_b+label{
+  width: 16px;
+  height:16px;
+  border:none;
+  display: inline-block;
+  background:url(0.png) no-repeat;
+}
+.radio_b+label{
+  background-position: -24px -10px;
+}
+.radio_b:checked+label{
+  background-position: -59px -10px;
+}
+.checkBox_b+label{
+  background-position:-24px -32px;
+}
+.checkBox_b:checked+label{
+  background-position: -60px -32px;
+}
