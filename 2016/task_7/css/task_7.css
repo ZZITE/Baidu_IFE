@@ -1,0 +1,39 @@
+body {
+    font-family:"Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    margin:0;
+    color:#333;
+}
+header{
+    height: 150px;
+    width: 100%;
+    margin-top:-5px;
+    padding: 0;
+}
+.header_left{
+    float: left;
+    margin-left: 50px;
+    height: 100px;
+    width: 120px;
+}
+.header_left h2{
+    display: block;
+    float: right;
+}
+.header_left img{
+    margin-top: 35px;
+}
+.header nav{
+    width: 50%;
+    height:100%;
+    margin-left: 25%;
+}
+nav ul{
+   
+    margin-left: 200px;
+    padding: 0;
+}
+nav ul li{
+    float: left;
+    margin-left: 40px;
+    line-height: 70px;
+}
