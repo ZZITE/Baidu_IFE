@@ -20,16 +20,16 @@
     <div>您输入的是：<span id="display">尚未录入</span></div>
     <script type="text/javascript">
     (function() {
-        var bt = document.getElementById("button");
-        var ip = document.getElementById("input");
-        var dis = document.getElementById("display");
-        button.onclick = function() {
-            if (ip.value) {
-                dis.innerHTML = ip.value;
-            } else {
-                alert("请输入");
-            }
-        }
+      var bt = document.getElementById("button");
+      var ip = document.getElementById("input");
+      var dis = document.getElementById("display");
+      button.onclick = function() {
+        if (ip.value) {
+          dis.innerHTML = ip.value;
+        } else {
+            alert("请输入");
+          }
+      }
     })()
     </script>
 </body>
