@@ -38,7 +38,7 @@ function getData() {
 
   var data = [];
   var source = document.getElementById("source");
-  for(var li = source.firstElementChild; li != null; li = li.nextElementSibling){ //遍历ul中li子元素
+  for(var li = source.firstElementChild; li !== null; li = li.nextElementSibling) { //遍历ul中li子元素
     var str = li.innerHTML;
     data.push(new Array(str.substring(0,str.indexOf("空气质量")),                             //城市名
       parseInt(str.substring(str.indexOf("<b>")+3, str.indexOf("</b>")))    //空气质量值
@@ -51,7 +51,7 @@ function getData() {
  */
 function sortAqiData(data) {
   return data.sort(function (d1,d2){
-    return d1[1] - d2[1];
+    return d2[1] - d1[1];
   });
 }
 /**
