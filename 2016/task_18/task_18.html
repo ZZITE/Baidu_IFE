@@ -56,7 +56,7 @@
             return typeof item === "function" ? item(e) : item;
           });
           var result = func.apply(data, arg);
-          if (succ != null) {
+          if (succ !== null) {
             succ(result);
           }
         } catch (ex) {
