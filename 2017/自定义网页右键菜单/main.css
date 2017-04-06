@@ -1,0 +1,33 @@
+
+/**
+ * 
+ * @ZZITE 
+ * @date    2017-04-07 00:25:59
+ */
+*{
+    margin:0;
+    padding:0;
+}
+#click-me{
+    width:100%;
+    height:200px;
+    border:1px solid rgb(235,235,235);
+    background: rgb(245,245,245);
+}
+#menu{
+    width:150px;
+    border:1px solid rgb(208,208,208);
+    visibility: hidden;
+    position: absolute;
+    background: white;
+}
+#menu label{
+    display: inline-block;
+    width:140px;
+    cursor: pointer;
+    padding:5px;
+}
+#menu label:hover{
+    background: blue;
+    color:white;
+}
