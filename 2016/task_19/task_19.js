@@ -83,3 +83,70 @@ window.onload = function() {
 	}
   };
 };
+
+var container = document.getElementById("container");
+  function addDivEvent() {  //重新绑定数字div的事件
+    var btn = container.getElementsByTagName("div");
+	for(var i = 0;i < btn.length;i++) {
+	  btn[i].onclick = function(i) {  //这里不做个闭包的话，i值无法传入。
+	    return function() {       //因为变量的活动对象是“静态”的，只能为最后一个固定的值。如var i=1;i=2;最后i的值毫无疑问是2；
+	      return list.del(i);  //解决的方法，就是闭包，在内形成另一个作用域，并引用内作用域的i而不是外作用域的i
+		};
+	  }(i);
+	}
+  }
+var botton = document.querySelectorAll("input");//获取上面的按钮，不过第一个是文本框排除掉
+	//以下为左右侧入，侧出按钮绑定事件。
+botton[2].onclick = function() {
+  var num = botton[0].value;
+  if(/^([1-9][0-9]|100)$/.test(num)) {
+    list.push(num);
+  } else alert("请输入范围在10-100的整数!");
+  };
+  botton[1].onclick=function() {
+  var num = botton[0].value;
+  if(/^([1-9][0-9]|100)$/.test(num)) {
+    list.unshift(num);
+  }	else alert("请输入范围在10-100的整数！");
+	};
+	
+	botton[3].onclick = list.shift;
+	botton[4].onclick = function() {list.pop();};
+	botton[5].onclick = function() {
+	  try {
+	    timing()();
+	  } catch(e) {
+	      alert("正在排序呢！");
+	    }
+	};
+	var btnClick = false;
+	function timing() {
+		if(btnClick) return false;
+		btnClick = true;
+		var i = 0,j = 1,delay = false;
+		return function listTime() {
+		  if(list.queue[j] < list.queue[j-1]) {
+		    list.queue[j] = list.queue[j]^list.queue[j-1];//异或交换，当然也可以用个中间数或者加减交换。
+			list.queue[j-1] = list.queue[j]^list.queue[j-1];
+			list.queue[j] = list.queue[j]^list.queue[j-1];
+			list.paint();
+			delay=true;
+		}
+		j++;
+		if(j === list.queue.length-i) {
+		  i += 1;
+		  j = 1;
+		  if(i === list.queue.length - 1) {
+		    btnClick = false;
+			return false;
+		  }
+	    }
+		if(delay) {
+		  delay = false;
+		  setTimeout(listTime,20);
+		} else listTime();
+		};		
+	}
+	list.paint();
+	addDivEvent();
+}
